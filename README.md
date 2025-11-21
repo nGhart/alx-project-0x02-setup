@@ -13,7 +13,7 @@ This repository is an excellent starting point for developers looking to master 
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 * **Framework:** [Next.js](https://nextjs.org/)
 * **Language:** [TypeScript](https://www.typescriptlang.org/)
