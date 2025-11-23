@@ -1,15 +1,8 @@
-@import "tailwindcss";
+/* @import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,32 +10,20 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+} */
+
+@import "tailwindcss";
+
+:root {
+  --color-primary: #34967c;
+  --color-secondary: #151117;
+  --color-accent: #ffa800;
+  --color-shimmer: #ebebeb;
 }
 
-@import "tailwindcss/preflight";
-@tailwind utilities;
-
-.bg-secondary {
-  background-color: #151117;
-}
-.bg-primary {
-  background-color: #34967c;
-}
-.bg-accent {
-  background-color: #ffa800;
-}
-.bg-shimmer {
-  background-color: #ebebeb;
-}
-.text-secondary {
-  background-color: #151117;
-}
-.text-primary {
-  background-color: #34967c;
-}
-.text-accent {
-  background-color: #ffa800;
-}
-.text-shimmer {
-  background-color: #ebebeb;
+@theme {
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-accent: var(--color-accent);
+  --color-shimmer: var(--color-shimmer);
 }

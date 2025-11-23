@@ -1,23 +1,25 @@
-import React from "react";
+import Link from "next/link";
 import Button from "../common/Button";
 import Image from "next/image";
 
 const Header = () => {
   const imagePath = "/images/Case Minimalistic.png";
+  const logoPath = "/images/logo.png";
+  const searchPath = "/images/Magnifer.png";
   return (
-    <div className="bg-primary text-white flex justify-center items-center gap-4 p-8 h-8 hover:bg-red-500 cursor-pointer border-amber-900 rounded-full">
-      <Image
-        src={imagePath}
-        alt="A minimalistic case design"
-        width={24}
-        height={24}
-        priority
-      />
-      <p>Overseas trip? Get the latest information on travel guides</p>
-      <Button bgColor="bg-secondary rounded-full" textColor="text-white">
-        More info
-      </Button>
-    </div>
+    <header className="w-full bg-white shadow p-4 flex items-center justify-between">
+      <h2 className="text-xl font-semibold">My App</h2>
+
+      <nav className="flex items-center gap-6">
+        <Link href="/home" className="text-gray-700 hover:text-primary">
+          Home
+        </Link>
+
+        <Link href="/about" className="text-gray-700 hover:text-primary">
+          About
+        </Link>
+      </nav>
+    </header>
   );
 };
 

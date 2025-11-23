@@ -1,21 +1,21 @@
 import React from "react";
 
 const Button = ({
-  textColor = "text-white",
-  bgColor,
   children,
   type = "button",
+  radius = "rounded-full",
+  style,
 }: {
   children: React.ReactNode;
-  textColor?: string;
-  bgColor?: string;
+
   type: "button" | "submit" | "reset" | undefined;
+  radius?: string;
+  style: string;
 }) => {
   return (
     <button
       type={type}
-      style={{ padding: "5px 8px", borderRadius: "10%" }}
-      className={`p-2 text-2xl rounded-md ${textColor} ${bgColor}`}
+      className={`py-1 px-2 flex items-center justify-center ${radius} ${style}`}
     >
       {children}
     </button>
