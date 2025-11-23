@@ -1,10 +1,12 @@
 import Button from "@/components/common/Button";
+import Header from "@/components/layout/Header";
 import PageLayout from "@/components/layout/PageLayout";
 
 const about = () => {
   return (
-    <PageLayout>
-      <div className="p-4 space-y-4">
+    <div className="p-4 space-y-4">
+      <Header />
+      <div className="mt-16">
         <h1 className="text-3xl font-bold">About Page</h1>
         <div className=" space-x-4">
           <Button size="small" shape="rounded-sm">
@@ -20,7 +22,7 @@ const about = () => {
           </Button>
         </div>
       </div>
-    </PageLayout>
+    </div>
   );
 };
 

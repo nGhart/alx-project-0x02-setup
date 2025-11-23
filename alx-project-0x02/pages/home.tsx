@@ -4,6 +4,7 @@ import Card from "@/components/common/Card";
 import PostModal from "@/components/common/PostModal";
 import { type CardProps } from "@/interfaces";
 import PageLayout from "@/components/layout/PageLayout";
+import Header from "@/components/layout/Header";
 
 const home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -28,9 +29,10 @@ const home = () => {
     setPosts([{ title, content }, ...posts]);
   };
   return (
-    <PageLayout>
-      <div className="p-4 space-y-4">
-        <h1 className="text-3xl font-bold mb-6">Home Page</h1>
+    <div className="p-4 space-y-4">
+      <Header />
+      <div className="mt-16">
+        <h1 className="text-3xl font-bold">Home Page</h1>
         <div className="flex justify-end py-4">
           <Button
             styleClass="px-4 py-2 bg-primary text-white rounded hover:bg-primary/80"
@@ -50,7 +52,7 @@ const home = () => {
           onSubmit={handleAddPost}
         />
       </div>
-    </PageLayout>
+    </div>
   );
 };
 
