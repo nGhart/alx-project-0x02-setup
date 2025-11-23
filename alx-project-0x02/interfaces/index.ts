@@ -11,3 +11,10 @@ export interface ButtonProps
   colorClass?: string;
   styleClass?: string;
 }
+
+export interface PostProps {
+  id?: number;
+  userId: number;
+  title: string;
+  content: string;
+}
