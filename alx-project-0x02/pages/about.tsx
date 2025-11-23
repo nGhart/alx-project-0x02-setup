@@ -1,6 +1,5 @@
 import Button from "@/components/common/Button";
 import PageLayout from "@/components/layout/PageLayout";
-import React from "react";
 
 const about = () => {
   return (
