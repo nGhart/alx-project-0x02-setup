@@ -9,8 +9,8 @@ const Button: React.FC<ButtonProps> = ({
   children,
   size = "medium",
   shape = "rounded-md",
-  colorClass = "bg-primary text-white hover:bg-primary/80",
-  styleClass = "",
+  colorClass,
+  styleClass = "bg-secondary text-white hover:bg-primary/80",
   ...props
 }) => {
   return (

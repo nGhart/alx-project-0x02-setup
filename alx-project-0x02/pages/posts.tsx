@@ -9,7 +9,7 @@ const posts = ({ posts }: PostsPageProps) => {
   return (
     <div className="p-4 space-y-4">
       <Header />
-      <div className="mt-16">
+      <div className="mt-16 space-y-4">
         <h1 className="text-3xl font-bold">Posts</h1>
         <div className="flex flex-col items-center gap-4">
           {posts.map((post) => (

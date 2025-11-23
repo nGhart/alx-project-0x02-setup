@@ -31,11 +31,11 @@ const home = () => {
   return (
     <div className="p-4 space-y-4">
       <Header />
-      <div className="mt-16">
+      <div className="mt-16 space-y-4">
         <h1 className="text-3xl font-bold">Home Page</h1>
         <div className="flex justify-end py-4">
           <Button
-            styleClass="px-4 py-2 bg-primary text-white rounded hover:bg-primary/80"
+            styleClass="px-4 py-2 bg-secondary text-white rounded hover:bg-secondary/80"
             onClick={() => setIsModalOpen(true)}
           >
             Add Post

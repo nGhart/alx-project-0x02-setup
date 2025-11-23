@@ -6,7 +6,7 @@ const about = () => {
   return (
     <div className="p-4 space-y-4">
       <Header />
-      <div className="mt-16">
+      <div className="mt-16 space-y-4">
         <h1 className="text-3xl font-bold">About Page</h1>
         <div className=" space-x-4">
           <Button size="small" shape="rounded-sm">

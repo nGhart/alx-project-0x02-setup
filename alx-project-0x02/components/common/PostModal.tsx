@@ -26,7 +26,11 @@ const PostModal: React.FC<PostModalProps> = ({ isOpen, onClose, onSubmit }) => {
       <div className="bg-white rounded-lg shadow-lg w-full max-w-md p-6">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl font-semibold">Add New Post</h2>
-          <Button styleClass="hover:shadow-lg" onClick={onClose}>
+          <Button
+            styleClass="hover:shadow-lg"
+            onClick={onClose}
+            shape="rounded-full"
+          >
             X
           </Button>
         </div>
@@ -47,14 +51,16 @@ const PostModal: React.FC<PostModalProps> = ({ isOpen, onClose, onSubmit }) => {
           <div className="flex justify-end gap-3">
             <Button
               type="button"
+              shape="rounded-full"
               styleClass="bg-gray-300 rounded hover:bg-gray-400"
               onClick={onClose}
             >
               Cancel
             </Button>
             <Button
+              shape="rounded-full"
               type="submit"
-              styleClass="bg-primary text-white hover:bg-primary/80"
+              styleClass="bg-secondary text-white hover:bg-primary/80"
             >
               Submit
             </Button>
