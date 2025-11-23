@@ -19,8 +19,30 @@
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@import "tailwindcss/preflight";
+@tailwind utilities;
+
+.bg-secondary {
+  background-color: #151117;
+}
+.bg-primary {
+  background-color: #34967c;
+}
+.bg-accent {
+  background-color: #ffa800;
+}
+.bg-shimmer {
+  background-color: #ebebeb;
+}
+.text-secondary {
+  background-color: #151117;
+}
+.text-primary {
+  background-color: #34967c;
+}
+.text-accent {
+  background-color: #ffa800;
+}
+.text-shimmer {
+  background-color: #ebebeb;
 }
