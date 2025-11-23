@@ -1,21 +1,22 @@
+import { ButtonProps } from "@/interfaces";
 import React from "react";
-
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode;
-  radius?: string;
-  styleClass?: string;
-}
-
+const sizeClasses: Record<string, string> = {
+  small: "px-3 py-1 text-sm",
+  medium: "px-4 py-2 text-base",
+  large: "px-6 py-3 text-lg",
+};
 const Button: React.FC<ButtonProps> = ({
   children,
-  radius = "rounded-full",
+  size = "medium",
+  shape = "rounded-md",
+  colorClass = "bg-primary text-white hover:bg-primary/80",
   styleClass = "",
   ...props
 }) => {
   return (
     <button
       {...props}
-      className={`px-4 py-2 flex items-center justify-center cursor-pointer ${radius} ${styleClass}`}
+      className={`cursor-pointer ${sizeClasses[size]}  ${styleClass} ${colorClass} ${shape}`}
     >
       {children}
     </button>

@@ -3,6 +3,7 @@ import Button from "@/components/common/Button";
 import Card from "@/components/common/Card";
 import PostModal from "@/components/common/PostModal";
 import { type CardProps } from "@/interfaces";
+import PageLayout from "@/components/layout/PageLayout";
 
 const home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -27,27 +28,29 @@ const home = () => {
     setPosts([{ title, content }, ...posts]);
   };
   return (
-    <div className="min-h-screen gap-6 bg-gray-50 p-4">
-      <h1 className="text-3xl font-bold mb-6">Home Page</h1>
-      <div className="flex justify-end py-4">
-        <Button
-          styleClass="px-4 py-2 bg-primary text-white rounded hover:bg-primary/80"
-          onClick={() => setIsModalOpen(true)}
-        >
-          Add Post
-        </Button>
+    <PageLayout>
+      <div className="p-4 space-y-4">
+        <h1 className="text-3xl font-bold mb-6">Home Page</h1>
+        <div className="flex justify-end py-4">
+          <Button
+            styleClass="px-4 py-2 bg-primary text-white rounded hover:bg-primary/80"
+            onClick={() => setIsModalOpen(true)}
+          >
+            Add Post
+          </Button>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          {posts.map((post, index) => (
+            <Card key={index} title={post.title} content={post.content} />
+          ))}
+        </div>
+        <PostModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          onSubmit={handleAddPost}
+        />
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {posts.map((post, index) => (
-          <Card key={index} title={post.title} content={post.content} />
-        ))}
-      </div>
-      <PostModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        onSubmit={handleAddPost}
-      />
-    </div>
+    </PageLayout>
   );
 };
 
