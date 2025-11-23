@@ -1,21 +1,21 @@
 import React from "react";
 
-const Button = ({
-  children,
-  type = "button",
-  radius = "rounded-full",
-  style,
-}: {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
-
-  type: "button" | "submit" | "reset" | undefined;
   radius?: string;
-  style: string;
+  styleClass?: string;
+}
+
+const Button: React.FC<ButtonProps> = ({
+  children,
+  radius = "rounded-full",
+  styleClass = "",
+  ...props
 }) => {
   return (
     <button
-      type={type}
-      className={`py-1 px-2 flex items-center justify-center ${radius} ${style}`}
+      {...props}
+      className={`px-4 py-2 flex items-center justify-center cursor-pointer ${radius} ${styleClass}`}
     >
       {children}
     </button>
