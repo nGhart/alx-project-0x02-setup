@@ -20,6 +20,9 @@ const Header = () => {
         <Link href="/posts" className="text-gray-700 hover:text-primary">
           Posts
         </Link>
+        <Link href="/users" className="text-gray-700 hover:text-primary">
+          Users
+        </Link>
       </nav>
     </header>
   );
