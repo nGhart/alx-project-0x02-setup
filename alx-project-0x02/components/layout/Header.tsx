@@ -7,9 +7,8 @@ const Header = () => {
   const logoPath = "/images/logo.png";
   const searchPath = "/images/Magnifer.png";
   return (
-    <header className="w-full bg-white shadow p-4 flex items-center justify-between">
-      <h2 className="text-xl font-semibold">My App</h2>
-
+    <header className="w-full bg-white shadow p-4 flex items-center justify-between fixed top-0 left-0">
+      <h2 className="text-xl font-semibold"></h2>
       <nav className="flex items-center gap-6">
         <Link href="/home" className="text-gray-700 hover:text-primary">
           Home
